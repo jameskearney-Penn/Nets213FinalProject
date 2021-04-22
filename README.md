@@ -2,13 +2,13 @@
 ## Goal:
 The goal of our project is to compile the most news worthy events for each month of 2020 using trending pages on Wikipedia. 
 ## FilePaths
-/Deliverable1/flow diagram : outlines the major components/stages of our project, and how they depend on eachother
-/Deliverable1/MockUps : basic outline of how HIT will be presented to worker and how they input data
-/Aggregation/WhatsWikiAgg : output of scores for user descriptions
-/Aggregation/WikiAggOutput : finalized labels for events based on best scores from user descriptions
-/Aggregation/whatswiki.py : python code for aggregating and outputting what were determined to be best labels
-/Quality_Control/whatWiki_output : output of workers deciding if event is newsworthy or not
-/Quality_Control/whatsWiki : worker descriptions for events they deemed newsworthy
+/Deliverable1/flow diagram : outlines the major components/stages of our project, and how they depend on eachother<br/>
+/Deliverable1/MockUps : basic outline of how HIT will be presented to worker and how they input data<br/>
+/Aggregation/WhatsWikiAgg : output of scores for user descriptions<br/>
+/Aggregation/WikiAggOutput : finalized labels for events based on best scores from user descriptions<br/>
+/Aggregation/whatswiki.py : python code for aggregating and outputting what were determined to be best labels<br/>
+/Quality_Control/whatWiki_output : output of workers deciding if event is newsworthy or not<br/>
+/Quality_Control/whatsWiki : worker descriptions for events they deemed newsworthy<br/>
 /Raw_Data/RawData : trending wikipedia articles taken from AWS
 ## Major Components of our Project
 
