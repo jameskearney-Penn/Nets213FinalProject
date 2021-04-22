@@ -2,7 +2,7 @@
 ## Goal:
 The goal of our project is to compile the most news worthy events for each month of 2020 using trending pages on Wikipedia. 
 ## FilePaths
-/deliverable1/flowchart : outlines the major components/stages of our project, and how they depend on eachother
+/Deliverable1/flow diagram : outlines the major components/stages of our project, and how they depend on eachother
 ## Major Components of our Project
 
 Setting up our data ->
