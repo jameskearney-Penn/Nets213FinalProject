@@ -3,6 +3,7 @@
 The goal of our project is to compile the most news worthy events for each month of 2020 using trending pages on Wikipedia. 
 ## FilePaths
 /Deliverable1/flow diagram : outlines the major components/stages of our project, and how they depend on eachother
+/Deliverable1/MockUps : basic outline of how HIT will be presented to worker and how they input data
 ## Major Components of our Project
 
 ## Setting up our data ->
