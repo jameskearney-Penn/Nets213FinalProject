@@ -1,0 +1,48 @@
+<!-- You must include this JavaScript file -->
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+
+<!-- For the full list of available Crowd HTML Elements and their input/output documentation,
+      please refer to https://docs.aws.amazon.com/sagemaker/latest/dg/sms-ui-template-reference.html -->
+
+<!-- You must include crowd-form so that your task submits answers to MTurk -->
+<h1>Is this Newsworthy?</h1>
+<h5>Read the article name, then determine if the Wikipedia Article is newsworthy in the month ${month} 2020.</h5>
+<h6>Refer to the linked page if you are unfamiliar with the topic.</h6>
+<crowd-form answer-format="flatten-objects">
+
+    <!-- The crowd-classifier element will create a tool for the Worker to select the
+           correct answer to your question -->
+    <crowd-classifier 
+      categories="['Yes', 'No']"
+      name="category"
+      header="Is this Article Newsworthy?"
+    >
+      <classification-target>
+
+        <!-- Your website URLs will be substituted for the "url" variable when you 
+               publish a batch with an input file containing multiple website URLs -->
+        <a href="https://en.wikipedia.org/wiki/${title}" target="_blank">${title}</a>
+
+      </classification-target>
+
+     <!-- Use the short-instructions section for quick instructions that the Worker
+            will see while working on the task. Including some basic examples of 
+            good and bad answers here can help get good results. You can include 
+            any HTML here. -->
+      <short-instructions>
+        Choose whether or not a given wikipedia article is newsworthy for the given month. Then, write a brief description of why (if applicable).
+      </short-instructions>
+
+      <!-- Use the full-instructions section for more detailed instructions that the 
+            Worker can open while working on the task. Including more detailed 
+            instructions and additional examples of good and bad answers here can
+            help get good results. You can include any HTML here. -->
+      <full-instructions header="Website Classification Instructions">
+        <p>Read the website carefully.</p>
+        <p>Choose the appropriate category that best suits the company.</p>
+        <p>Do additional research on the web if you're not sure.</p>
+      </full-instructions>
+    </crowd-classifier>
+</crowd-form>
+<h3> If you determined the article was newsworthy, please give a one sentence description of why. If it is not, write "N/A"</h3>
+<crowd-input name="description" placeholder="Write your description here..."required></crowd-input>
