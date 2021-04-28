@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2022.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!-- You must include this JavaScript file --&gt;</p>
+<p class="p1">&lt;script src="https://assets.crowd.aws/crowd-html-elements.js"&gt;&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- For the full list of available Crowd HTML Elements and their input/output documentation,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>please refer to https://docs.aws.amazon.com/sagemaker/latest/dg/sms-ui-template-reference.html --&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- You must include crowd-form so that your task submits answers to MTurk --&gt;</p>
+<p class="p1">&lt;crowd-form answer-format="flatten-objects"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;crowd-instructions link-text="View instructions" link-type="button"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;short-summary&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;It is the job of the worker to score from 1 to 10 on how important the article/description is to the events of the given month. &lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/short-summary&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;detailed-instructions&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;For a given HIT, a user will be given a link to a Wikipedia article<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>and a corresponding description of why this article was relevant in a<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>stated month and year. It is the job of the worker to score from 1 to<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>10 how important the article/description is to the events of the given month.<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>A score of 1 should indicate that the given description is not at all important<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>the events of the month and a score of 10 should indicate that the given<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>description is very notable to the events of the month. You will assign this<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>score to each description. &lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/detailed-instructions&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;positive-example&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;Provide an example of a good answer here&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;Explain why it's a good answer&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/positive-example&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;negative-example&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;Provide an example of a bad answer here&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;Explain why it's a bad answer&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/negative-example&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/crowd-instructions&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Wikipedia article: &lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;label "${articles}"&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Description:&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;label "${description}"&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;On a scale of 1-10, score how important the article/description is to the events of the given month. &lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;crowd-slider name="howMuch" min="1" max="10" step="1" pin="true" required&gt;&lt;/crowd-slider&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+</body>
+</html>
