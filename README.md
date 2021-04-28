@@ -9,6 +9,7 @@ The goal of our project is to compile the most news worthy events for each month
 /Aggregation/whatswiki.py : python code for aggregating and outputting what were determined to be best labels<br/>
 /Quality_Control/whatWiki_output : output of workers deciding if event is newsworthy or not<br/>
 /Quality_Control/whatsWiki : worker descriptions for events they deemed newsworthy<br/>
+/Quality_Control/HIT2.html : the html template for our mechnaical turk HIT <br/>
 /Raw_Data/RawData : trending wikipedia articles taken from AWS
 ## Major Components of our Project
 
