@@ -1,4 +1,4 @@
-#Instructions for What’sWiki
+# Instructions for What’sWiki
 Email maxflynn@sas.upenn.edu for any questions regarding the project.
 
 Our project, What’sWiki, aims to have workers deem and summarize if/why popular Wikipedia articles for a given month are trending.
